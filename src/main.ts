@@ -8,5 +8,9 @@ if (environment.production) {
   enableProdMode();
 }
 
+// we can now access environment.apiUrl
+const API_URL = environment.apiUrl;
+
+
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
