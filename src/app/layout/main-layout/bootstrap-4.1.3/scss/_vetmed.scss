@@ -1,0 +1,61 @@
+$vet-green-color-base: #5ebca2;
+$vet-green-color-dark: darken($vet-green-color-base, 30%);
+
+
+//
+// Style
+
+.vet-green-themes {
+	.vet-nav-bg-green,  {
+		background-color: darken($vet-green-color-base, 20%);
+		color: $white;
+	
+	}
+	.vet-footer-green {
+		font-size: 0.8rem;
+		background-color: $vet-green-color-base;
+		color: $vet-green-color-dark;		
+	
+		.vet-footer-label {
+			color: darken($vet-green-color-base, 30%);
+			border-bottom: 0.1rem dashed $white;
+			padding-bottom: 0.4rem;
+			margin-bottom: 0.4rem;
+		}
+	}
+		
+	.vet-jumbotron-green {
+		background-color: rgba(darken($vet-green-color-base, 10%), 0.7);
+		
+		> p, blockquote, h2 {
+			color: $gray-200;
+		}
+	}
+	
+}
+
+
+
+//
+// Behevior
+
+.vet-section-wellcome {
+	background-image: url("../img/AdobeStock_63199247_Preview.jpeg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	
+	padding: ($spacer * 2) 0rem;
+}
+	
+.vet-row-wellcom, vet-row-invitation {
+	padding: ($spacer * 2) 0rem;
+
+}
+
+.vet-section-invitation {
+	padding: ($spacer * 4) 0rem;
+	
+
+}

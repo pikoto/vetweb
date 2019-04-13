@@ -1,0 +1,19 @@
+body, wrapper {
+  	min-height:100vh;
+  	
+}
+
+// for navbar fixed-top 
+wrapper {
+	padding-top: ($navbar-padding-y * 2) + $line-height-base + $font-size-base; // ~ 3.5rem;
+}
+
+.flex-fill {
+  	flex:1 1 auto;
+}
+
+.footer {
+	padding-top: $line-height-base * 1rem;
+	padding-bottom: $line-height-base * 1rem;
+	
+}

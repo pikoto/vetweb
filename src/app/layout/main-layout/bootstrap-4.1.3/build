@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#
+# Script Build SASS to CSS
+# bootstrap.sass to ../../css/bootstrap.css
+#
+#PATH=$PATH:/home/piotrek/dart-sass
+
+sass scss/bootstrap-vetmed.scss ../../../../assets/css/bootstrap.css

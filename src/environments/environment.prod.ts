@@ -2,5 +2,5 @@ export const environment = {
   production: true,
 
   // URL of development API
-  apiUrl: 'http://localhost:3000/posts'
+  apiUrl: 'http://0.0.0.0:5000/' // flask_server
 };

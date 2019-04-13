@@ -18,36 +18,35 @@ export interface IExam {
   updated_at: string;
 }
 
+export interface IRole {
+id : Number;
+name : string;
+description : string;
+}
+
 @Component({
   selector: 'app-selec',
   templateUrl: './selec.component.html',
-  styleUrls: ['./selec.component.css']
+  styleUrls: ['./selec.component.scss']
 })
 export class SelecComponent implements OnInit {
 
   _postsArray: IPosts[];
   _examsArray: IExam[];
+  _rolesArray: IRole[];
 
    constructor(private apiSerivce: ApiService) {
    }
 
    ngOnInit(): void {
-       this.getExams();
-   }
-
-   getPosts(): void {
-       this.apiSerivce.getPosts()
-           .subscribe(
-               resultArray => this._postsArray = resultArray,
-               error => console.log("Error :: " + error)
-           )
+       this.getRoles();
    }
 
 
-   getExams(): void {
-       this.apiSerivce.getExams()
+   getRoles(): void {
+       this.apiSerivce.getRoles()
            .subscribe(
-               resultArray => this._examsArray = resultArray,
+               resultArray => this._rolesArray = resultArray,
                error => console.log("Error :: " + error)
            )
    }

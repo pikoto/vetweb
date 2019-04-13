@@ -6,36 +6,24 @@ import { Observable } from 'rxjs/internal/Observable';
 //import { Observable } from 'rxjs';
 
 
-export interface Api {
-  id:	number;
-  title: string;
-  author: string;
-}
+export interface Role {
+  id : Number;
+  name : string;
+  description : string;
 
-export interface Exam {
-  created_at: string;
-  description: string;
-  id: number;
-  last_updated_by: string;
-  title: string;
-  updated_at: string;
 }
 
 @Injectable()
 export class ApiService {
 
   API_URL  = environment.apiUrl;
-  Api: Api;
+  Role: Role;
 
   constructor(  private http: HttpClient  )
   { }
 
-  getPosts(): Observable<Api[]> {
-    return this.http.get<Api[]>(this.API_URL + 'posts');
-  }
-
-  getExams(): Observable<Exam[]> {
-    return this.http.get<Exam[]>(this.API_URL + 'exams');
+  getRoles(): Observable<Role[]> {
+    return this.http.get<Role[]>(this.API_URL + 'api/role');
   }
 
 }
